@@ -1,0 +1,195 @@
+$font-family-base: "Inter", sans-serif;
+
+$theme-colors: (
+  "primary": #067b95,
+  "success": #28a745,
+  "danger": #f8d7da,
+  "white": #fff,
+  "brand-secondary": #67c0c2,
+  "gray-100": #f8f9fa,
+  "gray-200": #e9ecef,
+  "gray-400": #ced4da,
+  "gray-500": #adb5bd,
+  "gray-700": #495057,
+  "gray-800": #343a40,
+  "gray-900": #212529,
+  "red-700": #842029,
+  "green-500": #198754,
+  "secondary-light": #abb5be,
+);
+
+$container-max-widths: (
+  sm: 1110px,
+);
+
+$body-color: map-get($theme-colors, "gray-700");
+$pagination-disabled-border-color: map-get($theme-colors, "gray-200");
+$table-bg: transparent;
+
+@import "bootstrap/scss/bootstrap";
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.container {
+  width: 1110px;
+}
+
+// Buttons
+
+.btn {
+  height: 2.375rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  padding: 0.625rem 1rem;
+  flex-shrink: 0;
+}
+
+.btn-danger {
+  color: map-get($theme-colors, "red-700");
+}
+.btn-danger:hover {
+  color: map-get($theme-colors, "red-700");
+}
+
+// Form
+
+.input-container {
+  width: 100%;
+}
+
+.form-control {
+  padding: 0.5625rem 1rem;
+  height: 2.375rem;
+}
+
+.form-label {
+  margin-bottom: 0.375rem;
+  line-height: 1.25rem;
+}
+
+// Table
+
+.table {
+  border-top: 1px solid $border-color;
+}
+
+.table thead tr {
+  border-bottom: solid $border-color;
+}
+
+.table th {
+  color: map-get($theme-colors, "gray-900");
+  font-weight: 800;
+  padding: 0.5rem 0.9375rem;
+  align-content: space-around;
+  height: 54px;
+}
+.table td {
+  color: map-get($theme-colors, "gray-800");
+  padding: 0.5rem 0.9375rem;
+  align-content: space-around;
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: 0.125rem;
+  border-color: map-get($theme-colors, "secondary-light");
+}
+
+.form-check-input:checked {
+  background-color: map-get($theme-colors, "primary");
+  border: 0;
+}
+
+// Badge
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+// Toast
+
+.toast {
+  margin: 1.6875rem 2.125rem;
+  padding: 0.75rem;
+  background-color: map-get($theme-colors, "green-500");
+  border-radius: 0.5rem;
+  color: map-get($theme-colors, "white");
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toast .btn-close {
+  padding: 0;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e");
+  opacity: 1;
+}
+.toast .btn-close:hover {
+  background-color: transparent;
+}
+
+// Pagination
+
+.pagination-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  .pagination-text {
+    text-wrap-mode: nowrap;
+  }
+
+  .pagination {
+    gap: 0.25rem;
+    margin-bottom: 0;
+  }
+
+  .page-link {
+    height: 2.375rem;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    color: map-get($theme-colors, "primary");
+  }
+
+  .page-link:hover {
+    color: map-get($theme-colors, "primary");
+  }
+
+  .pagination .disabled > .page-link {
+    color: map-get($theme-colors, "gray-500");
+    background-color: map-get($theme-colors, "white");
+    border-radius: 0.25rem;
+  }
+
+  .pagination .active > .page-link {
+    color: map-get($theme-colors, "white");
+    background-color: map-get($theme-colors, "primary");
+  }
+
+  .form-select {
+    border-radius: 0.25rem;
+    border-color: map-get($theme-colors, "gray-200");
+    padding-right: 2rem;
+    padding-left: 1rem;
+    min-width: max-content;
+    background-size: 13px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ADB5BD' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  }
+}

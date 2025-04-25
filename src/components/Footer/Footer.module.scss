@@ -1,0 +1,32 @@
+@import "../../styles/custom.scss";
+
+.footerContainer {
+  border-top: 1px solid map-get($theme-colors, "gray-400");
+  min-width: 1110px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+
+  p {
+    margin-bottom: 0;
+    color: map-get($theme-colors, "gray-700");
+  }
+}
+
+.footerContent {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 0;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  img {
+    width: 189px;
+    height: auto;
+  }
+}

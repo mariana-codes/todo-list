@@ -1,0 +1,71 @@
+@import "../../styles/custom.scss";
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid map-get($theme-colors, "gray-400");
+  background-color: map-get($theme-colors, "gray-100");
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0px -5px 0px 0px map-get($theme-colors, "brand-secondary");
+  width: 100%;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 100%;
+    color: map-get($theme-colors, "gray-900");
+    margin: 0.5rem 0;
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.formHeaderPagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3rem;
+  width: 100%;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  p {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: map-get($theme-colors, "gray-700");
+  }
+}
